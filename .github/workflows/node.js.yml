@@ -29,7 +29,7 @@ jobs:
           ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-server: ${{ secrets.FTP_SERVER }}
           files-to-copy: "./dist"
-          remote-dir: "./httpdocs"
+          remote-dir: "/var/www/vhosts/streamlinecloud.net/docs.streamlinecloud.net/"
           node-version: 20
           npm-install: false
           restart: false
