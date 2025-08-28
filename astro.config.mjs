@@ -38,6 +38,9 @@ export default defineConfig({
           ],
       }),
 	],
+    redirects: {
+        '/': 'https://streamlinecloud.net/docs',
+    },
 
   vite: {
     plugins: [tailwindcss()],
