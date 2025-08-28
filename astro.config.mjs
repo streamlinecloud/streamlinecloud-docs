@@ -9,7 +9,11 @@ export default defineConfig({
   integrations: [
       starlight({
           title: 'StreamlineCloud',
-          social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+          components: {
+              ThemeProvider: './src/components/ThemeProvider.astro',
+              ThemeSelect: './src/components/ThemeSelect.astro',
+          },
+          social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/streamlinecloud/StreamlineCloud' }],
           customCss: [
               // Relative path to your custom CSS file
               './src/styles/streamline.css',
