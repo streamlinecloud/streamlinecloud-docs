@@ -16,9 +16,20 @@ export default defineConfig({
           ],
           sidebar: [
               {
-                  label: 'StreamlineCloud',
-                  // Autogenerate a group of links for the 'constellations' directory.
-                  autogenerate: { directory: 'streamline' },
+                  label: 'Getting started',
+                  autogenerate: { directory: 'streamline/getting-started' },
+              },
+              {
+                  label: 'Core features',
+                  autogenerate: { directory: 'streamline/core' },
+              },
+              {
+                  label: 'Advanced',
+                  autogenerate: { directory: 'streamline/advanced' },
+              },
+              {
+                  label: 'Development',
+                  autogenerate: { directory: 'streamline/development' },
               },
           ],
       }),
