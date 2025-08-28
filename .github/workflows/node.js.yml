@@ -1,0 +1,37 @@
+name: Build & Deploy to Plesk
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Plesk
+        uses: celleb/plesk-deployer@v1.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          files-to-copy: "./dist"
+          remote-dir: "/var/www/vhosts/streamlinecloud.net/docs.streamlinecloud.net/."
+          node-version: 20
+          npm-install: false
+          restart: false
+          clean-remote-dir: true
+
