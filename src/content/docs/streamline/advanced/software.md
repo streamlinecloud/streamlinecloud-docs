@@ -35,7 +35,7 @@ Or you can change your default software. To do that just shutdown StreamlineClou
 ````
 You can just change this value and start StreamlineCloud again. Just make sure that your software is installed and appears in the **software list** command!
 
-## Clearing the cache for an installed software
+## Clearing the cache of an installed software
 ````bash
 software clearCache <softwareName>
 ````
