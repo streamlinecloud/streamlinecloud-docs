@@ -1,5 +1,5 @@
 ---
-title: Fallback control
+title: Fallback Control
 ---
 Fallback control is an optional feature that automatically stops and starts fallback servers based on the network online count. Fallback servers are your "lobby" servers. You can change your fallback group in the config.
 
