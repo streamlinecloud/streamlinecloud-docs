@@ -9,6 +9,10 @@ export default defineConfig({
   integrations: [
       starlight({
           title: 'StreamlineCloud',
+          logo: {
+              src: './src/assets/logo.png',
+          },
+          favicon: '/favicon.png',
           components: {
               ThemeProvider: './src/components/ThemeProvider.astro',
               ThemeSelect: './src/components/ThemeSelect.astro',
